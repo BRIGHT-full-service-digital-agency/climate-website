@@ -1,0 +1,27 @@
+{
+  "name": "practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:production": "mix --production",
+    "watch": "mix watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRIGHT-full-service-digital-agency/climate-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BRIGHT-full-service-digital-agency/climate-website/issues"
+  },
+  "homepage": "https://github.com/BRIGHT-full-service-digital-agency/climate-website#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.48",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^12.1.0"
+  }
+}
