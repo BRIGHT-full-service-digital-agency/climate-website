@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.pageHeader button{
+    position: absolute;
+    width: 232px;
+    height: 50px;
+    left: 1041px;
+    top: 39px;
+    border: 0px;
+    color: #ffff;
+    background: #ACD15D;
+    border-radius: 50px;
+}
+.pageHeader a {
+    position: absolute;
+    top: 49px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.pageHeader .guidelines{
+    width: 93px;
+    height: 30px;
+    left: 505px;
+}
+.pageHeader .transport{
+    width: 85px;
+    height: 30px;
+    left: 632px;
+}
+.pageHeader .locations{
+    width: 85px;
+    height: 30px;
+    left: 751px;
+}
+.pageHeader .food{
+    width: 45px;
+    height: 30px;
+    left: 870px;
+}
+.pageHeader .waste{
+    width: 56px;
+    height: 30px;
+    left: 949px;
+}
+.firstSection{
+
+    width: 1440px;
+    height: 825px;
+    left: 0px;
+    top: 0px;
+    background: #10877A;
+}
+.firstSection h1{
+    position: absolute;
+    width: 445px;
+    height: 224px;
+    left: 123px;
+    top: 215px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    /* or 110% */
+    
+    
+    color: #FFFFFF;
+}
+.pageHeader{
+
+}
