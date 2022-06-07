@@ -3,12 +3,19 @@
   width: 100%;
   font-family: "Montserrat";
   background: #10877A;
+  top: 0;
+  left: 0;
+}
+.pageHeader .row {
+  align-items: center;
 }
 .pageHeader button {
   border: 0px;
   color: #FFFFFF;
   background: #ACD15D;
   border-radius: 50px;
+  height: 50px;
+  width: 232px;
 }
 .pageHeader a {
   font-family: "Montserrat";
@@ -18,6 +25,52 @@
   line-height: 30px;
   color: #FFFFFF;
   text-decoration: none;
+}
+.pageHeader .col-menu {
+  margin-left: auto;
+}
+.pageHeader .col-menu a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.pageHeader .col-logo img {
+  width: 120px;
+  height: 120px;
+}
+.pageHeader .col-menu {
+  align-content: center;
+}
+.pageHeader .col-lang-switcher {
+  padding-left: 30px;
+  color: #FFFFFF;
+}
+.pageHeader .triangle-button {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFFFFF;
+}
+.pageHeader .current-language {
+  position: relative;
+}
+.pageHeader .current-language .triangle-button {
+  position: absolute;
+  top: 8px;
+  right: -11px;
+}
+
+body, html {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  padding-top: 124px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 * {
@@ -33,6 +86,11 @@
   margin-right: auto;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .firstSection {
   width: 100%;
   height: 825px;
@@ -41,7 +99,6 @@
   background: #10877A;
 }
 .firstSection h1 {
-  position: absolute;
   width: 445px;
   height: 224px;
   left: 123px;
@@ -60,14 +117,12 @@
   font-size: 15px;
   line-height: 23px;
   color: #FFFFFF;
-  position: absolute;
   width: 454px;
   height: 72px;
   left: 123px;
   top: 459px;
 }
 .firstSection .download {
-  position: absolute;
   width: 313px;
   height: 50px;
   left: 123px;
@@ -77,10 +132,50 @@
   border-radius: 50px;
 }
 .firstSection .mainImg {
-  position: absolute;
   width: 973px;
   height: 561px;
   left: 720px;
   top: 132px;
   border-radius: 368.5px;
+}
+
+.firstSection h1 {
+  font-weight: bold;
+}
+.firstSection .col-image {
+  width: 50%;
+  position: relative;
+}
+.firstSection .col-image .recycle-logo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.firstSection .col-image .background-img {
+  width: 100%;
+}
+.firstSection .col-text {
+  width: 50%;
+  padding-right: 143px;
+  align-self: center;
+}
+.firstSection .download-button {
+  width: 313px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  border: 0;
+  color: #10877A;
+  padding: 10px 47px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  opacity: 1;
+  transition: 0.4s ease all;
+}
+.firstSection .download-button img {
+  padding-left: 51px;
+}
+.firstSection .download-button:hover {
+  opacity: 0.8;
 }
