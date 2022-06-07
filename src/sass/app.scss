@@ -19,8 +19,9 @@
 }
 
 .firstSection{
+    overflow: hidden;
+    padding-bottom: 135px;
     width: 100%;
-    height: 825px;
     left: 0px;
     top: 0px;
     background: #10877A;
@@ -65,28 +66,38 @@
         top: 132px;
         border-radius: 368.5px;
     }
-}
-.firstSection{
     h1{
         font-weight: bold;   
     }
     .col-image{
         width: 50%;
+
         position: relative;
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
         .recycle-logo{
             position: absolute;
             bottom: 0;
             left: 0;
         }
         .background-img{
-            width: 100%;
-
+            width: 50vw;
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+            }
         }
     }
     .col-text{
         width: 50%;
         padding-right: 143px;
         align-self: center;
+        padding-top: 20px;
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+            padding-bottom: 30px;
+        }
     }
     .download-button{
         width: 313px;
@@ -101,6 +112,7 @@
         white-space: nowrap;
         opacity: 1;
         transition: 0.4s ease all;
+        margin-top: 30px;
         img{
             padding-left: 51px;
         }
@@ -109,6 +121,11 @@
         }
         
     }
-
+}
+.secondSection{
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(16, 135, 122, 0.04);
 
 }

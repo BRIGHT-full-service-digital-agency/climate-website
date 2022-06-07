@@ -1,4 +1,5 @@
 .pageHeader {
+  z-index: 10;
   position: fixed;
   width: 100%;
   font-family: "Montserrat";
@@ -16,6 +17,11 @@
   border-radius: 50px;
   height: 50px;
   width: 232px;
+  opacity: 1;
+  transition: 0.4s ease all;
+}
+.pageHeader button:hover {
+  opacity: 0.8;
 }
 .pageHeader a {
   font-family: "Montserrat";
@@ -25,6 +31,11 @@
   line-height: 30px;
   color: #FFFFFF;
   text-decoration: none;
+  opacity: 1;
+  transition: 0.4s ease all;
+}
+.pageHeader a:hover {
+  opacity: 0.8;
 }
 .pageHeader .col-menu {
   margin-left: auto;
@@ -44,20 +55,19 @@
   padding-left: 30px;
   color: #FFFFFF;
 }
-.pageHeader .triangle-button {
+.pageHeader .current-language {
+  position: relative;
+}
+.pageHeader .current-language .triangle-button {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #FFFFFF;
-}
-.pageHeader .current-language {
-  position: relative;
-}
-.pageHeader .current-language .triangle-button {
   position: absolute;
   top: 8px;
   right: -11px;
+  transition: 0.1s ease all;
 }
 
 body, html {
@@ -92,8 +102,9 @@ body {
 }
 
 .firstSection {
+  overflow: hidden;
+  padding-bottom: 135px;
   width: 100%;
-  height: 825px;
   left: 0px;
   top: 0px;
   background: #10877A;
@@ -138,7 +149,6 @@ body {
   top: 132px;
   border-radius: 368.5px;
 }
-
 .firstSection h1 {
   font-weight: bold;
 }
@@ -146,18 +156,35 @@ body {
   width: 50%;
   position: relative;
 }
+@media screen and (max-width: 1200px) {
+  .firstSection .col-image {
+    width: 100%;
+  }
+}
 .firstSection .col-image .recycle-logo {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 .firstSection .col-image .background-img {
-  width: 100%;
+  width: 50vw;
+}
+@media screen and (max-width: 1200px) {
+  .firstSection .col-image .background-img {
+    width: 100%;
+  }
 }
 .firstSection .col-text {
   width: 50%;
   padding-right: 143px;
   align-self: center;
+  padding-top: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .firstSection .col-text {
+    width: 100%;
+    padding-bottom: 30px;
+  }
 }
 .firstSection .download-button {
   width: 313px;
@@ -172,10 +199,18 @@ body {
   white-space: nowrap;
   opacity: 1;
   transition: 0.4s ease all;
+  margin-top: 30px;
 }
 .firstSection .download-button img {
   padding-left: 51px;
 }
 .firstSection .download-button:hover {
   opacity: 0.8;
+}
+
+.secondSection {
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(16, 135, 122, 0.04);
 }
