@@ -1,4 +1,14 @@
 .fourthSection{
+    padding-top: 80px;
+    position: relative;
+    .background-image{
+        top: -30%;
+        right: -30%;
+        height: 130%;
+        width: 100vw;
+        position: absolute;
+    }
+    overflow: hidden;
     width: 100%;
     background: rgba(172, 209, 93, 0.2);
     left: 0;
@@ -12,11 +22,63 @@
         line-height: 45px;
         color: #10877A;
     }
+    .picture-row{
+        padding-bottom: 153px;
+        padding-top: 70px;
+        display: flex;
+        width: 100vw;
+        margin-left: -50px;
+        .col {
+            position: relative;
+            width: 25vw;
+            padding-left: 50px;
+            .image-c{
+                padding-top: 206px;
+                padding-right: 35px;
+                padding-left: 46px;
+                padding-bottom: 43px;
+                position: relative;
+                h3{
+                    display: block;
+                    min-height: 135px;
+                    position: relative;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 34px;
+                    line-height: 45px;
+                    color: #FFFFFF;
+                }
+                img{
+                    border-radius: 0px 120px 0px 0px;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+    
+                }
+                .filter{
+                    background: rgba(16, 135, 122, 0.4);
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px 120px 0px 0px;
+                }
+            }
+        }
+    }
     .first-header-text-col{
-        width: 50%;
+        width: 40%;
     }
     .second-header-text-col{
-        padding-top: 100px;
+        padding-top: 80px;
         width: 50%;
+        p{
+            width: 70%;
+        }
     }
 }

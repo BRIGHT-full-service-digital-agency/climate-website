@@ -208,6 +208,14 @@ h2::after {
 .firstSection .download-button:hover {
   opacity: 0.8;
 }
+.firstSection .download-button span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  color: #10877A;
+}
 
 .secondSection {
   width: 100%;
@@ -371,10 +379,20 @@ h2::after {
 }
 
 .fourthSection {
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   background: rgba(172, 209, 93, 0.2);
   left: 0;
   top: 0;
+}
+.fourthSection .background-image {
+  top: -30%;
+  right: -30%;
+  height: 130%;
+  width: 100vw;
+  position: absolute;
 }
 .fourthSection h1 {
   font-family: "Fira Sans";
@@ -385,12 +403,64 @@ h2::after {
   line-height: 45px;
   color: #10877A;
 }
+.fourthSection .picture-row {
+  padding-bottom: 153px;
+  padding-top: 70px;
+  display: flex;
+  width: 100vw;
+  margin-left: -50px;
+}
+.fourthSection .picture-row .col {
+  position: relative;
+  width: 25vw;
+  padding-left: 50px;
+}
+.fourthSection .picture-row .col .image-c {
+  padding-top: 206px;
+  padding-right: 35px;
+  padding-left: 46px;
+  padding-bottom: 43px;
+  position: relative;
+}
+.fourthSection .picture-row .col .image-c h3 {
+  display: block;
+  min-height: 135px;
+  position: relative;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+.fourthSection .picture-row .col .image-c img {
+  border-radius: 0px 120px 0px 0px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fourthSection .picture-row .col .image-c .filter {
+  background: rgba(16, 135, 122, 0.4);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 120px 0px 0px;
+}
 .fourthSection .first-header-text-col {
-  width: 50%;
+  width: 40%;
 }
 .fourthSection .second-header-text-col {
-  padding-top: 100px;
+  padding-top: 80px;
   width: 50%;
+}
+.fourthSection .second-header-text-col p {
+  width: 70%;
 }
 
 * {
