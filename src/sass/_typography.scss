@@ -9,3 +9,23 @@ body {
 * {
     box-sizing: border-box;
 }
+h2{
+    position: relative;
+    padding-top: 59px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.19em;
+    color: #004B23;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 93px;
+        border: 2px solid #004B23;
+        height: 0;
+        top: 74px;
+        left: 150px;
+    }
+}
