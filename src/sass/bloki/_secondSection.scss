@@ -1,0 +1,82 @@
+.secondSection{
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(16, 135, 122, 0.04);
+    .row{
+        padding-top: 155px;
+        padding-bottom: 87px;
+    }
+    h1{
+        font-family: 'Fira Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+        color: #414141;
+    }
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 29px;
+        color: #414141;
+    }
+    a {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        color: #10877A;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+
+    .first-text-col{
+        width: 36%;
+        margin-bottom: 40px;
+        @media screen and (max-width: 1109px) {
+            width: 100%;
+            text-align: left;
+        }
+        @media screen and (max-width: 900px) {
+            width: 100%;
+        }
+    }
+    .second-text-col{
+        width: 30%;
+        margin-left: 20px;
+        margin-right: 20px;
+        @media screen and (max-width: 1109px){
+            width: 40%;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            margin-bottom: 20px;
+
+        }
+    }
+    .third-text-col{
+        position: relative;
+        width: 30%;
+        padding-bottom: 87px;
+        .logo{
+            position: absolute;
+            right: 0;
+            padding-top: 20px;
+        }
+        @media screen and (max-width:1109px){
+            width: 40%;
+        }
+        @media screen and (max-width:900px) {
+            width: 100%;
+        }
+        
+    }
+}
