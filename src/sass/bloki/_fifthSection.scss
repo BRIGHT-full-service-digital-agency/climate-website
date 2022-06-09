@@ -1,0 +1,99 @@
+.fifthSection{
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #10877A;
+    padding-bottom: 62px;
+    .text-and-button-col{
+        width: 40%;
+        h1{
+            padding-top: 114px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 107.1%;
+            color: #FFFFFF;
+        }
+        p {
+            padding-top: 24px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+        button {
+            margin-top: 34px;
+            width: 313px;
+            height: 50px;
+            background: #FFFFFF;
+            border-radius: 50px;
+            border: 0;
+            color: #10877A;
+            padding: 10px 47px;
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            opacity: 1;
+            transition: 0.4s ease all;
+            img{
+                padding-left: 51px;
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+            span{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 30px;
+                color: #10877A;
+            }
+        }
+
+    }
+    .drop-down-col{
+        width: 45%;
+        padding-top: 66px;
+        .row{
+            padding-bottom: 33px;
+            border-bottom: 2px solid #1d968a;
+            input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+              }
+            h3{
+                width: 60%;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 23px;
+                color: #FFFFFF;
+                text-align: center;
+                padding-left: 30px;
+                padding-top: 30px;
+            }
+            &:hover{
+                background-color: #1d968a;
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+            img{
+                padding-top: 30px;
+                align-items: center;
+                padding-left: 180px;
+            }
+        }
+    }
+    .question-mark-col{
+        width: 15%;
+        padding-left: 84px;
+        padding-top: 50px;
+    }
+}

@@ -30,7 +30,7 @@
         width: 100vw;
         margin-left: -50px;
         flex-wrap: nowrap;
-        @media screen and (max-width: 1449px) {
+        @media screen and (max-width: 1549px) {
             flex-wrap: wrap;
             width: 100%;
         }
@@ -38,9 +38,9 @@
             position: relative;
             width: 25vw;
             padding-left: 50px;
-            @media screen and (max-width: 1449px) {
+            @media screen and (max-width: 1549px) {
                 padding-bottom: 40px;
-                width: 50vw;
+                width: 100%;
             }
             
             .image-c{
@@ -59,7 +59,7 @@
                     font-size: 34px;
                     line-height: 45px;
                     color: #FFFFFF;
-                    @media screen and (max-width: 1449px) {
+                    @media screen and (max-width: 1549px) {
                         font-size: 30px;
                         line-height: 30px;
                     }
@@ -90,12 +90,19 @@
     }
     .first-header-text-col{
         width: 40%;
+        @media screen and (max-width: 911px) {
+            width: 100%;
+        }
     }
     .second-header-text-col{
         padding-top: 80px;
-        width: 50%;
+        width: 60%;
         p{
             width: 70%;
+        }
+        @media screen and (max-width: 911px) {
+            width: 100%;
+            padding-top: 30px;
         }
     }
 }

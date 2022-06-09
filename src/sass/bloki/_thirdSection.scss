@@ -35,11 +35,12 @@
             padding-left: 50px;
             font-family: 'Montserrat';
             font-style: normal;
+            padding-top: 27px;
+            padding-bottom: 27px;
             font-weight: 500;
             font-size: 23px;
             line-height: 30px;
             width: 100%;
-            height: 84px;
             background: #ACD15D;
             color: #FFFFFF;
             border: 0;
@@ -47,6 +48,7 @@
             &:hover{
             background-color: #92b34d;
             }
+
             span{
                 position: relative;
                 display: inline-block;
@@ -62,7 +64,15 @@
                     content: "";
                     background: url('../pictures/bulta.svg') no-repeat center;
                 }
+                @media screen and (max-width: 360px) {
+                    padding-left: 10px;
+                }
+                @media screen and (max-width: 343px){
+                    padding-left: 0px;
+                }
+                
             }
+
         }
     }
 }

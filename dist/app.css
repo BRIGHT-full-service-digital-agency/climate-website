@@ -1,5 +1,5 @@
 .pageHeader {
-  z-index: 10;
+  z-index: 30;
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -118,11 +118,11 @@ h2::after {
   background: #10877A;
 }
 .firstSection .background-image {
+  overflow: hidden;
   position: absolute;
   top: -12%;
   left: 20%;
   width: 50vw;
-  z-index: 20;
 }
 .firstSection h1 {
   width: 445px;
@@ -232,6 +232,7 @@ h2::after {
 
 .secondSection {
   position: relative;
+  overflow: hidden;
   width: 100%;
   left: 0;
   top: 0;
@@ -367,11 +368,12 @@ h2::after {
   padding-left: 50px;
   font-family: "Montserrat";
   font-style: normal;
+  padding-top: 27px;
+  padding-bottom: 27px;
   font-weight: 500;
   font-size: 23px;
   line-height: 30px;
   width: 100%;
-  height: 84px;
   background: #ACD15D;
   color: #FFFFFF;
   border: 0;
@@ -395,6 +397,16 @@ h2::after {
   background-size: contain;
   content: "";
   background: url("../pictures/bulta.svg") no-repeat center;
+}
+@media screen and (max-width: 360px) {
+  .thirdSection .upper-row button span {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 343px) {
+  .thirdSection .upper-row button span {
+    padding-left: 0px;
+  }
 }
 
 .fourthSection {
@@ -431,7 +443,7 @@ h2::after {
   margin-left: -50px;
   flex-wrap: nowrap;
 }
-@media screen and (max-width: 1449px) {
+@media screen and (max-width: 1549px) {
   .fourthSection .picture-row {
     flex-wrap: wrap;
     width: 100%;
@@ -442,10 +454,10 @@ h2::after {
   width: 25vw;
   padding-left: 50px;
 }
-@media screen and (max-width: 1449px) {
+@media screen and (max-width: 1549px) {
   .fourthSection .picture-row .col {
     padding-bottom: 40px;
-    width: 50vw;
+    width: 100%;
   }
 }
 .fourthSection .picture-row .col .image-c {
@@ -466,7 +478,7 @@ h2::after {
   line-height: 45px;
   color: #FFFFFF;
 }
-@media screen and (max-width: 1449px) {
+@media screen and (max-width: 1549px) {
   .fourthSection .picture-row .col .image-c h3 {
     font-size: 30px;
     line-height: 30px;
@@ -499,12 +511,122 @@ h2::after {
 .fourthSection .first-header-text-col {
   width: 40%;
 }
+@media screen and (max-width: 911px) {
+  .fourthSection .first-header-text-col {
+    width: 100%;
+  }
+}
 .fourthSection .second-header-text-col {
   padding-top: 80px;
-  width: 50%;
+  width: 60%;
 }
 .fourthSection .second-header-text-col p {
   width: 70%;
+}
+@media screen and (max-width: 911px) {
+  .fourthSection .second-header-text-col {
+    width: 100%;
+    padding-top: 30px;
+  }
+}
+
+.fifthSection {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #10877A;
+  padding-bottom: 62px;
+}
+.fifthSection .text-and-button-col {
+  width: 40%;
+}
+.fifthSection .text-and-button-col h1 {
+  padding-top: 114px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 107.1%;
+  color: #FFFFFF;
+}
+.fifthSection .text-and-button-col p {
+  padding-top: 24px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.fifthSection .text-and-button-col button {
+  margin-top: 34px;
+  width: 313px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  border: 0;
+  color: #10877A;
+  padding: 10px 47px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  opacity: 1;
+  transition: 0.4s ease all;
+}
+.fifthSection .text-and-button-col button img {
+  padding-left: 51px;
+}
+.fifthSection .text-and-button-col button:hover {
+  opacity: 0.8;
+}
+.fifthSection .text-and-button-col button span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  color: #10877A;
+}
+.fifthSection .drop-down-col {
+  width: 45%;
+  padding-top: 66px;
+}
+.fifthSection .drop-down-col .row {
+  padding-bottom: 33px;
+  border-bottom: 2px solid #1d968a;
+}
+.fifthSection .drop-down-col .row input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.fifthSection .drop-down-col .row h3 {
+  width: 60%;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.fifthSection .drop-down-col .row:hover {
+  background-color: #1d968a;
+}
+.fifthSection .drop-down-col .row:last-child {
+  border-bottom: none;
+}
+.fifthSection .drop-down-col .row img {
+  padding-top: 30px;
+  align-items: center;
+  padding-left: 180px;
+}
+.fifthSection .question-mark-col {
+  width: 15%;
+  padding-left: 84px;
+  padding-top: 50px;
 }
 
 * {
