@@ -23,15 +23,26 @@
         color: #10877A;
     }
     .picture-row{
+        margin-bottom: -87px;
         padding-bottom: 153px;
         padding-top: 70px;
         display: flex;
         width: 100vw;
         margin-left: -50px;
+        flex-wrap: nowrap;
+        @media screen and (max-width: 1449px) {
+            flex-wrap: wrap;
+            width: 100%;
+        }
         .col {
             position: relative;
             width: 25vw;
             padding-left: 50px;
+            @media screen and (max-width: 1449px) {
+                padding-bottom: 40px;
+                width: 50vw;
+            }
+            
             .image-c{
                 padding-top: 206px;
                 padding-right: 35px;
@@ -48,6 +59,13 @@
                     font-size: 34px;
                     line-height: 45px;
                     color: #FFFFFF;
+                    @media screen and (max-width: 1449px) {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+                    @media screen and (max-width: 1329px) {
+                        font-size: 25px;
+                    }
                 }
                 img{
                     border-radius: 0px 120px 0px 0px;
@@ -57,7 +75,6 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-    
                 }
                 .filter{
                     background: rgba(16, 135, 122, 0.4);

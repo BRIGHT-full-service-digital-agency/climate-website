@@ -1,5 +1,6 @@
 .pageHeader{
     z-index: 10;
+    overflow: hidden;
     position: fixed;
     width: 100%;
     font-family: 'Montserrat';
@@ -58,7 +59,9 @@
         color: #FFFFFF;
 
     }
-
+    .navBar{
+        z-index: 40;
+    }
     .current-language{
         position: relative;
         .triangle-button{

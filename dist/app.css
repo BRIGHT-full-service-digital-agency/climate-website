@@ -1,5 +1,6 @@
 .pageHeader {
   z-index: 10;
+  overflow: hidden;
   position: fixed;
   width: 100%;
   font-family: "Montserrat";
@@ -55,6 +56,9 @@
   padding-left: 30px;
   color: #FFFFFF;
 }
+.pageHeader .navBar {
+  z-index: 40;
+}
 .pageHeader .current-language {
   position: relative;
 }
@@ -105,12 +109,20 @@ h2::after {
 }
 
 .firstSection {
-  overflow: hidden;
+  position: relative;
   padding-bottom: 135px;
   width: 100%;
   left: 0px;
   top: 0px;
+  overflow: hidden;
   background: #10877A;
+}
+.firstSection .background-image {
+  position: absolute;
+  top: -12%;
+  left: 20%;
+  width: 50vw;
+  z-index: 20;
 }
 .firstSection h1 {
   width: 445px;
@@ -168,6 +180,7 @@ h2::after {
   left: 0;
 }
 .firstSection .col-image .background-img {
+  overflow: hidden;
   width: 50vw;
 }
 @media screen and (max-width: 1200px) {
@@ -218,10 +231,16 @@ h2::after {
 }
 
 .secondSection {
+  position: relative;
   width: 100%;
   left: 0;
   top: 0;
   background: rgba(16, 135, 122, 0.04);
+}
+.secondSection .background-img {
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
 }
 .secondSection .row {
   padding-top: 155px;
@@ -404,16 +423,30 @@ h2::after {
   color: #10877A;
 }
 .fourthSection .picture-row {
+  margin-bottom: -87px;
   padding-bottom: 153px;
   padding-top: 70px;
   display: flex;
   width: 100vw;
   margin-left: -50px;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1449px) {
+  .fourthSection .picture-row {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 .fourthSection .picture-row .col {
   position: relative;
   width: 25vw;
   padding-left: 50px;
+}
+@media screen and (max-width: 1449px) {
+  .fourthSection .picture-row .col {
+    padding-bottom: 40px;
+    width: 50vw;
+  }
 }
 .fourthSection .picture-row .col .image-c {
   padding-top: 206px;
@@ -432,6 +465,17 @@ h2::after {
   font-size: 34px;
   line-height: 45px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 1449px) {
+  .fourthSection .picture-row .col .image-c h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 1329px) {
+  .fourthSection .picture-row .col .image-c h3 {
+    font-size: 25px;
+  }
 }
 .fourthSection .picture-row .col .image-c img {
   border-radius: 0px 120px 0px 0px;

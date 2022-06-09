@@ -1,8 +1,14 @@
 .secondSection{
+    position: relative;
     width: 100%;
     left: 0;
     top: 0;
     background: rgba(16, 135, 122, 0.04);
+    .background-img{
+        position: absolute;
+        overflow: hidden;
+        top: 10%;
+    }
     .row{
         padding-top: 155px;
         padding-bottom: 87px;
