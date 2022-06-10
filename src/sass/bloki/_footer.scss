@@ -1,0 +1,36 @@
+.pageFooter{
+    background: #10877A;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 66px;
+    h4 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+    .col-1{
+        width: 30%;
+        padding-top: 12px;
+    }
+    .col-2{
+        width: 20%;
+    }
+    .col-3{
+        width: 20%;
+    }
+    .col-4{
+        width: 20%;
+    }
+}
