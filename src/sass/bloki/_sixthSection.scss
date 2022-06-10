@@ -1,0 +1,47 @@
+.sixthSection{
+    text-align: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #E5E5E5;
+    h1{
+        padding-top: 83px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 120px;
+        line-height: 135px;
+        color: #ACD15D;
+    }
+    a {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        text-decoration-line: underline;
+        color: #10877A;
+        scroll-behavior: smooth;
+    }
+    span {
+        img {
+            padding-left: 14px;
+        }
+    }
+
+    .textCol{
+        white-space: nowrap;
+        width: 100vw;
+    }
+    .back-to-top-container{
+        align-items: center;
+        padding-top: 82px;
+        padding-bottom: 64px;
+        img{
+            position: absolute;
+            justify-content: center;
+            padding-left: 14px;
+        }
+    }
+}

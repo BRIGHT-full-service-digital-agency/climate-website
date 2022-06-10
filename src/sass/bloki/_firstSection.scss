@@ -97,8 +97,14 @@
         opacity: 1;
         transition: 0.4s ease all;
         margin-top: 30px;
+        @media screen and (max-width: 368px){
+            width: 270px;
+        }
         img{
             padding-left: 51px;
+            @media screen and (max-width: 368px) {
+                padding-left: 21px;
+            }
         }
         &:hover{
             opacity: 0.8;
