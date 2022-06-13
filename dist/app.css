@@ -55,7 +55,19 @@
 }
 .pageHeader .col-lang-switcher {
   padding-left: 30px;
+}
+.pageHeader .col-lang-switcher select {
+  -webkit-appearance: button;
+  border: 0px;
+  outline: 0px;
+  background: #10877A;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
   color: #FFFFFF;
+  border-color: #10877A;
 }
 .pageHeader .navBar {
   z-index: 40;
@@ -647,9 +659,13 @@ h2::after {
   overflow: hidden;
 }
 .fifthSection .drop-down-col .tab {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
   color: white;
   overflow: hidden;
+}
+.fifthSection .drop-down-col .tab:last-child {
+  border-bottom: none;
 }
 .fifthSection .drop-down-col .tab-label {
   display: flex;
@@ -673,7 +689,7 @@ h2::after {
 }
 .fifthSection .drop-down-col .tab-content {
   max-height: 0;
-  padding: 0 1em;
+  padding: 0 50px;
   color: white;
   background: #1d968a;
   transition: all 0.35s;
@@ -788,6 +804,8 @@ h2::after {
   color: rgba(255, 255, 255, 0.5);
 }
 .pageFooter a {
+  text-decoration: none;
+  display: block;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -795,18 +813,59 @@ h2::after {
   line-height: 30px;
   color: #FFFFFF;
 }
-.pageFooter .col-1 {
+.pageFooter .climate-button {
+  border: 0px;
+  color: #FFFFFF;
+  background: #ACD15D;
+  border-radius: 50px;
+  height: 50px;
+  width: 232px;
+  opacity: 1;
+  transition: 0.4s ease all;
+  margin-top: 44px;
+}
+.pageFooter .climate-button:hover {
+  opacity: 0.8;
+}
+.pageFooter p {
+  text-align: right;
+  padding-bottom: 40px;
+  padding-right: 84px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.pageFooter .logo-col {
   width: 30%;
   padding-top: 12px;
 }
-.pageFooter .col-2 {
+@media screen and (max-width: 926px) {
+  .pageFooter .logo-col {
+    width: 100%;
+  }
+}
+.pageFooter .col {
+  margin-left: 20px;
   width: 20%;
 }
-.pageFooter .col-3 {
-  width: 20%;
+@media screen and (max-width: 926px) {
+  .pageFooter .col {
+    width: 33%;
+    margin-left: 0;
+  }
 }
-.pageFooter .col-4 {
-  width: 20%;
+@media screen and (max-width: 414px) {
+  .pageFooter .col {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+.pageFooter .col:last-child button {
+  width: 100%;
+  padding-bottom: 0;
 }
 
 * {

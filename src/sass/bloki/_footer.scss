@@ -13,6 +13,8 @@
         color: rgba(255, 255, 255, 0.5);
     }
     a{
+        text-decoration: none;
+        display: block;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -20,17 +22,56 @@
         line-height: 30px;
         color: #FFFFFF;
     }
-    .col-1{
+    .climate-button{
+        border: 0px;
+        color: #FFFFFF;
+        background: #ACD15D;
+        border-radius: 50px;
+        height: 50px;
+        width: 232px;
+        opacity: 1;
+        transition: 0.4s ease all;
+        margin-top: 44px;
+        &:hover{
+            opacity: 0.8;
+        }
+        
+    }
+
+    p{
+        text-align: right;
+        padding-bottom: 40px;
+        padding-right: 84px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .logo-col{
         width: 30%;
         padding-top: 12px;
+        @media screen and (max-width: 926px){
+            width: 100%;
+        }
     }
-    .col-2{
+    .col{
+        margin-left: 20px;
         width: 20%;
-    }
-    .col-3{
-        width: 20%;
-    }
-    .col-4{
-        width: 20%;
+        @media screen and (max-width: 926px){
+            width: 33%;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 414px){
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        &:last-child{
+            button{
+                width: 100%;
+                padding-bottom: 0;
+            }
+        }
     }
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="dist/app.css">
-
+        <script src="dist/app.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
         <title>Document</title>
     </head>
     <body>
@@ -33,22 +33,15 @@
                         <button class="CTAbutton">CTA button</button>
                     </div>
                     <div class="col-lang-switcher">
-                        <div class="lang-switcher">
-                            <div class="current-language">
-                                En
-                                <div class="triangle-button"></div>
-                            </div>
-                            <div class="language-menu">
-                                <!--Language choice-->
-                                <a href=""></a>
-                                <a href=""></a>
-                            </div>
-                        </div>
+                        <select data-placeholder="">
+                            <option value="EN">En</option>
+                            <option value="RU">Ru</option>
+                            <option value="LV">Lv</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </header>
-        <div id="top"></div>
         <section class="firstSection">
             <img class="background-image" src="pictures/Group4.svg" alt="background-image-1">
             <div class="wrap">
@@ -258,34 +251,35 @@
         <footer class="pageFooter">
             <div class="wrap">
                 <div class="row">
-                    <div class="col-1">
+                    <div class="logo-col">
                         <img alt="logo" src="pictures/Vector.svg">
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                         <h4>GameOn</h4>
-                        <a>About Us</a>
-                        <a>Homepage</a>
-                        <a>Blog</a>
+                        <a href="">About Us</a>
+                        <a href="">Homepage</a>
+                        <a href="">Blog</a>
                     </div>
-                    <div class="col-3">
+                    <div class="col">
                         <h4>Guidelines</h4>
-                        <a>Transport</a>
-                        <a>Event location & Venue Accomodation</a>
-                        <a>Food</a>
-                        <a>Waste</a>
-                        <a>Water & Energy</a>
-                        <a>Communication & Advertising</a>
-                        <a>Facilities</a>
+                        <a href="">Transport</a>
+                        <a href="">Event location & Venue Accomodation</a>
+                        <a href="">Food</a>
+                        <a href="">Waste</a>
+                        <a href="">Water & Energy</a>
+                        <a href="">Communication & Advertising</a>
+                        <a href="">Facilities</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4>Other</h4>
-                        <a>Privacy policy</a>
-                        <a>Accessability</a>
-                        <a>Terms and Conditions</a>
-                        <button>climategame.eu</button>
+                        <a href="">Privacy policy</a>
+                        <a href="">Accessability</a>
+                        <a href="">Terms and Conditions</a>
+                        <button class="climate-button">climategame.eu</button>
                     </div>
                 </div>
             </div>
+            <p>Made by: BRIGHT</p>
         </footer>
     </body>
 </html>
