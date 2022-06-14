@@ -47,11 +47,13 @@ var span = document.getElementsByClassName("close")[0];
 var button = document.getElementById("openModal");
 
 button.onclick = function () {
+  document.querySelector('html').classList.add("modal-open");
   modal.style.display = "block";
 };
 
 span.onclick = function () {
   modal.style.display = "none";
+  document.querySelector('html').classList.remove("modal-open");
 };
 
 /***/ }),

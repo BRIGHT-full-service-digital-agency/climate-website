@@ -5,6 +5,12 @@ body, html  {
 }
 body {
     padding-top: 124px;
+
+}
+html {
+    &.modal-open{
+        overflow: hidden;
+    }
 }
 * {
     box-sizing: border-box;
