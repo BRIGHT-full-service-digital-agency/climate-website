@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .pageHeader {
   z-index: 30;
-  overflow: hidden;
   position: fixed;
   width: 100%;
   font-family: "Montserrat";
@@ -53,38 +52,116 @@
 .pageHeader .col-menu {
   align-content: center;
 }
+@media screen and (max-width: 1204px) {
+  .pageHeader .col-menu {
+    display: none;
+  }
+}
 .pageHeader .col-lang-switcher {
   padding-left: 30px;
+  cursor: pointer;
 }
-.pageHeader .col-lang-switcher select {
-  -webkit-appearance: button;
-  border: 0px;
-  outline: 0px;
-  background: #10877A;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  color: #FFFFFF;
-  border-color: #10877A;
-}
-.pageHeader .navBar {
-  z-index: 40;
-}
-.pageHeader .current-language {
+.pageHeader .col-lang-switcher .language-choice {
   position: relative;
 }
-.pageHeader .current-language .triangle-button {
+.pageHeader .col-lang-switcher .language-choice .triangle-button {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #FFFFFF;
+  position: relative;
+  top: 18px;
+  right: -27px;
+  transition: 0.2s ease all;
+}
+.pageHeader .col-lang-switcher .language-choice.active .triangle-button {
+  transform: rotate(180deg);
+}
+.pageHeader .col-lang-switcher .languages {
+  background-color: #10877A;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  overflow: visible;
+  display: none;
+  list-style: none;
   position: absolute;
-  top: 8px;
-  right: -11px;
-  transition: 0.1s ease all;
+}
+.pageHeader .navBar {
+  z-index: 40;
+}
+.pageHeader .CTAbutton {
+  border: 0px;
+}
+@media screen and (max-width: 1204px) {
+  .pageHeader .CTAbutton {
+    display: none;
+  }
+}
+.pageHeader #openModal {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+.pageHeader #openModal div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 12px;
+}
+@media screen and (max-width: 1204px) {
+  .pageHeader #openModal {
+    display: block;
+  }
+}
+.pageHeader .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.pageHeader .modal .modal-button {
+  width: 100%;
+}
+.pageHeader .modal .modal-content {
+  margin: auto;
+  background-color: #fefefe;
+  padding: 20px;
+  border: none;
+  width: 60%;
+  height: 100vh;
+  border-radius: 25px;
+}
+.pageHeader .modal .modal-content a {
+  text-align: center;
+  padding-bottom: 20px;
+  display: block;
+}
+.pageHeader .modal .modal-content a:last-child {
+  padding-bottom: 0;
+}
+.pageHeader .modal .modal-content .content-container {
+  padding-top: 20px;
+}
+.pageHeader .modal .modal-content .close {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.pageHeader .modal .modal-content .close:hover, .pageHeader .modal .modal-content .close:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 body, html {
@@ -132,7 +209,6 @@ h2::after {
   background: #10877A;
 }
 .firstSection .background-image {
-  overflow: hidden;
   position: absolute;
   top: -12%;
   left: 20%;

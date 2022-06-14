@@ -1,6 +1,5 @@
 .pageHeader{
     z-index: 30;
-    overflow: hidden;
     position: fixed;
     width: 100%;
     font-family: 'Montserrat';
@@ -23,6 +22,7 @@
             opacity: 0.8;
         }
     }
+
     a {
         font-family: 'Montserrat';
         font-style: normal;
@@ -36,6 +36,7 @@
         &:hover{
             opacity: 0.8;
         }
+
     }
     .col-menu {
         margin-left: auto;
@@ -52,38 +53,117 @@
     }
     .col-menu{
         align-content: center;
+        @media screen and (max-width: 1204px){
+            display: none;
+        }
     }
     .col-lang-switcher{
         padding-left: 30px;
-        select{
-            -webkit-appearance: button;
-            border:0px;
-            outline:0px;
-            background: #10877A;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 30px;
-            color: #FFFFFF;
-            border-color: #10877A;
+        cursor: pointer;
+        .language-choice{
+            position: relative;
+            .triangle-button{
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #FFFFFF;
+                position: relative;
+                top: 18px;
+                right: -27px;
+                transition: 0.2s ease all;
+            }
+            &.active{
+                .triangle-button{
+                    transform: rotate(180deg);
+                }
+            }
+
+
         }
+        .languages{
+            background-color: #10877A;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            overflow: visible;
+            display: none;
+            list-style: none;
+            position: absolute;
+        }
+
     }
     .navBar{
         z-index: 40;
     }
-    .current-language{
-        position: relative;
-        .triangle-button{
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid #FFFFFF;
-            position: absolute;
-            top: 8px;
-            right: -11px;
-            transition: 0.1s ease all;
+    .CTAbutton{
+        border: 0px;
+        @media screen and (max-width: 1204px){
+            display: none;
         }
     }
+    #openModal{
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        display: none;
+        width: 50px;
+        height: 50px;
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 12px;
+        }
+        @media screen and (max-width: 1204px){
+            display: block;
+        }
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        .modal-button{
+            width: 100%;
+        }
+        .modal-content{
+            margin: auto;
+            background-color: #fefefe;
+            padding: 20px;
+            border: none;
+            width: 60%;
+            height: 100vh;
+            border-radius: 25px;
+            a{
+                text-align: center;
+                padding-bottom: 20px;
+                display: block;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+            .content-container{
+                padding-top: 20px;
+            }
+            .close{
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                &:hover, &:focus{
+                    color: gray;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
 }
