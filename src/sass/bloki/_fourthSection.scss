@@ -7,6 +7,7 @@
         height: 130%;
         width: 100vw;
         position: absolute;
+        overflow: hidden;
     }
     overflow: hidden;
     width: 100%;
@@ -23,7 +24,6 @@
         color: #10877A;
     }
     .picture-row{
-        margin-bottom: -87px;
         padding-bottom: 153px;
         padding-top: 70px;
         display: flex;
@@ -33,6 +33,21 @@
         @media screen and (max-width: 1549px) {
             flex-wrap: wrap;
             width: 100%;
+        }
+        .swiper-wrapper{
+            cursor: none;
+        }
+        .swiper-scrollbar{
+            margin-bottom: 87px;
+            position: absolute;
+            left: 50px;
+            bottom: 3px;
+            z-index: 50;
+            height: 5px;
+            width: calc(100% - 50px);
+            .swiper-scrollbar-drag{
+                background-color: #10877A;
+            }
         }
         .col {
             position: relative;

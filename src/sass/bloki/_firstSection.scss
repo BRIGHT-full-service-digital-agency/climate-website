@@ -24,6 +24,11 @@
         font-size: 50px;
         line-height: 55px;
         color: #FFFFFF;
+        @media screen and (max-width: 500px){
+            font-size: 40px;
+            width: 100%;
+            height: 100%;
+        }
     }
     p {
         font-family: 'Montserrat';
@@ -36,6 +41,10 @@
         height: 72px;
         left: 123px;
         top: 459px;
+        @media screen and (max-width: 500px){
+            width: 100%;
+            height: 100%;
+        }
     }
     .download {
         width: 313px;
@@ -63,6 +72,15 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            #arrow1{
+                transform-origin: 50% 50%;
+            }
+            #arrow2{
+                transform-origin: 50% 50%;
+            }
+            #arrow3{
+                transform-origin: 50% 50%;
+            }
         }
         .background-img{
             overflow: hidden;
@@ -80,6 +98,7 @@
         @media screen and (max-width: 1200px) {
             width: 100%;
             padding-bottom: 30px;
+            padding-right: 0;
         }
     }
     .download-button{
