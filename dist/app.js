@@ -16,6 +16,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+ //language toggle menu
 
 var list = document.querySelectorAll('.language-choice');
 
@@ -44,7 +45,8 @@ function toggleMenu() {
     this.classList.remove("active");
     x.style.display = "none";
   }
-}
+} //modal for mobile view
+
 
 var modal = document.getElementById("Modal");
 var span = document.getElementsByClassName("close")[0];
@@ -58,37 +60,48 @@ button.onclick = function () {
 span.onclick = function () {
   modal.style.display = "none";
   document.querySelector('html').classList.remove("modal-open");
-};
+}; //functionality for back to top button
+
 
 var backToTop = document.getElementById("toTop");
 
 backToTop.onclick = function () {
   window.scrollTo(1, 1);
-};
+}; //infinite arrow rotation animation
+
 
 var rotate = document.getElementById("arrow1");
 var rotate1 = document.getElementById("arrow2");
-var rotate2 = document.getElementById("arrow3"); //document.addEventListener("DOMContentLoaded", rotateArrow);
-//function rotateArrow(){
+var rotate2 = document.getElementById("arrow3");
+var middledot = document.getElementById("middle-dot");
+document.addEventListener("DOMContentLoaded", rotateArrow);
 
-rotate.animate([{
-  transform: 'rotate(360deg)'
-}], {
-  duration: 10000,
-  iterations: Infinity
-});
-rotate1.animate([{
-  transform: 'rotate(360deg)'
-}], {
-  duration: 10000,
-  iterations: Infinity
-});
-rotate2.animate([{
-  transform: 'rotate(360deg)'
-}], {
-  duration: 10000,
-  iterations: Infinity
-}); //}
+function rotateArrow() {
+  middledot.animate([{
+    transform: 'rotate(360deg)'
+  }], {
+    duration: 10000,
+    iterations: Infinity
+  }), rotate.animate([{
+    transform: 'rotate(360deg)'
+  }], {
+    duration: 10000,
+    iterations: Infinity
+  });
+  rotate1.animate([{
+    transform: 'rotate(360deg)'
+  }], {
+    duration: 10000,
+    iterations: Infinity
+  });
+  rotate2.animate([{
+    transform: 'rotate(360deg)'
+  }], {
+    duration: 10000,
+    iterations: Infinity
+  });
+} //swiper element
+
 
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
@@ -100,16 +113,18 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
       spaceBetween: 30
     },
     850: {
-      slidesPerView: 2
+      slidesPerView: 2,
+      spaceBetween: 20
     },
     320: {
-      slidesPerView: 1
+      slidesPerView: 1,
+      spaceBetween: 10
     }
   },
   scrollbar: {
     el: ".swiper-scrollbar"
   }
-});
+}); // cursor
 
 /***/ }),
 

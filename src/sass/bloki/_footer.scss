@@ -21,6 +21,10 @@
         font-size: 14px;
         line-height: 30px;
         color: #FFFFFF;
+        transition: 0.4s ease all;
+        &:hover{
+            opacity: 0.8;
+        }
     }
     .climate-button{
         border: 0px;

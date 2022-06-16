@@ -1,91 +1,105 @@
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
+//language toggle menu
 const list = document.querySelectorAll('.language-choice');
 for (let language of list) {
-    language.addEventListener("click", toggleMenu);
+  language.addEventListener("click", toggleMenu);
 }
-function toggleMenu(){
+function toggleMenu() {
 
-    var x = this.parentNode.querySelector(".languages");
-    var x1 = this
-    if (x.style.display == "none") {
-        this.classList.add("active")
-        x.style.display = "block";
-    } else {
-        this.classList.remove("active")
-        x.style.display = "none";
-    }
+  var x = this.parentNode.querySelector(".languages");
+  var x1 = this
+  if (x.style.display == "none") {
+    this.classList.add("active")
+    x.style.display = "block";
+  } else {
+    this.classList.remove("active")
+    x.style.display = "none";
+  }
 }
+
+//modal for mobile view
 var modal = document.getElementById("Modal");
 var span = document.getElementsByClassName("close")[0];
 var button = document.getElementById("openModal");
-button.onclick = function(){
-    document.querySelector('html').classList.add("modal-open");
-    modal.style.display = "block";
+button.onclick = function () {
+  document.querySelector('html').classList.add("modal-open");
+  modal.style.display = "block";
 }
-span.onclick = function() {
-    modal.style.display = "none";
-    document.querySelector('html').classList.remove("modal-open");
+span.onclick = function () {
+  modal.style.display = "none";
+  document.querySelector('html').classList.remove("modal-open");
 }
 
+
+//functionality for back to top button
 var backToTop = document.getElementById("toTop");
-backToTop.onclick = function(){
-    window.scrollTo(1, 1);
+backToTop.onclick = function () {
+  window.scrollTo(1, 1);
 }
+
+//infinite arrow rotation animation
 var rotate = document.getElementById("arrow1");
 var rotate1 = document.getElementById("arrow2");
 var rotate2 = document.getElementById("arrow3");
-
-//document.addEventListener("DOMContentLoaded", rotateArrow);
-
-//function rotateArrow(){
-    rotate.animate([
-        { transform: 'rotate(360deg)' },
-      ], {
-        duration: 10000,
-        iterations: Infinity
-      });
-    rotate1.animate([
-        { transform: 'rotate(360deg)' }
-      ], {
-        duration: 10000,
-        iterations: Infinity
-      });
-      rotate2.animate([
-        { transform: 'rotate(360deg)' }
-      ], {
-        duration: 10000,
-        iterations: Infinity
-      });
-//}
-
-
-
-
-
-
-
-
-
-
-const swiper = new Swiper('.swiper', {
-    modules: [ Navigation, Pagination, Scrollbar ],
-    freeMode: true,
-    direction: 'horizontal',
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      850: {
-        slidesPerView: 2
-      },
-      320: {
-        slidesPerView: 1
-      }
-
-    },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-      },
+var middledot = document.getElementById("middle-dot");
+document.addEventListener("DOMContentLoaded", rotateArrow);
+function rotateArrow() {
+  middledot.animate([
+    { transform: 'rotate(360deg)' }
+  ], {
+    duration: 10000,
+    iterations: Infinity
+  }),
+  rotate.animate([
+    { transform: 'rotate(360deg)' },
+  ], {
+    duration: 10000,
+    iterations: Infinity
   });
+  rotate1.animate([
+    { transform: 'rotate(360deg)' }
+  ], {
+    duration: 10000,
+    iterations: Infinity
+  });
+  rotate2.animate([
+    { transform: 'rotate(360deg)' }
+  ], {
+    duration: 10000,
+    iterations: Infinity
+  });
+}
+
+
+
+
+//swiper element
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Pagination, Scrollbar],
+  freeMode: true,
+  direction: 'horizontal',
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    850: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    }
+
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+
+
+// cursor
+

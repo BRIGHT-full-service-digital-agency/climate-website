@@ -233,8 +233,10 @@ h2::after {
   top: 0px;
   overflow: hidden;
   background: #10877A;
+  z-index: 5;
 }
 .firstSection .background-image {
+  z-index: 1;
   position: absolute;
   top: -12%;
   left: 20%;
@@ -279,6 +281,8 @@ h2::after {
   }
 }
 .firstSection .download {
+  z-index: 2;
+  position: relative;
   width: 313px;
   height: 50px;
   left: 123px;
@@ -307,6 +311,15 @@ h2::after {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media screen and (max-width: 800px) {
+  .firstSection .col-image .recycle-logo {
+    height: 25vw;
+    width: 25vw;
+  }
+}
+.firstSection .col-image .recycle-logo #middle-dot {
+  transform-origin: 50% 50%;
 }
 .firstSection .col-image .recycle-logo #arrow1 {
   transform-origin: 50% 50%;
@@ -513,6 +526,7 @@ h2::after {
   }
 }
 .thirdSection .upper-row button {
+  cursor: pointer;
   text-align: left;
   padding-left: 50px;
   font-family: "Montserrat";
@@ -597,9 +611,6 @@ h2::after {
     flex-wrap: wrap;
     width: 100%;
   }
-}
-.fourthSection .picture-row .swiper-wrapper {
-  cursor: none;
 }
 .fourthSection .picture-row .swiper-scrollbar {
   margin-bottom: 87px;
@@ -914,8 +925,30 @@ h2::after {
   padding-left: 14px;
 }
 .sixthSection .textCol {
+  position: relative;
+}
+.sixthSection .textCol h1 {
+  font-size: 7vw;
   white-space: nowrap;
-  width: 100vw;
+  -webkit-animation: move 20s linear infinite;
+          animation: move 20s linear infinite;
+}
+.sixthSection .textCol h1.styled {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+}
+@-webkit-keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
 }
 .sixthSection .back-to-top-container {
   align-items: center;
@@ -926,6 +959,9 @@ h2::after {
   position: absolute;
   justify-content: center;
   padding-left: 14px;
+}
+.sixthSection .back-to-top-container a {
+  cursor: pointer;
 }
 
 .pageFooter {
@@ -952,6 +988,10 @@ h2::after {
   font-size: 14px;
   line-height: 30px;
   color: #FFFFFF;
+  transition: 0.4s ease all;
+}
+.pageFooter a:hover {
+  opacity: 0.8;
 }
 .pageFooter .climate-button {
   border: 0px;
@@ -1899,4 +1939,12 @@ button.swiper-pagination-bullet {
 
 .cursor {
   position: absolute;
+}
+
+#circle {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #3c2946;
+  position: fixed;
+  border-radius: 50%;
 }
