@@ -12,6 +12,7 @@
   align-items: center;
 }
 .pageHeader button {
+  cursor: pointer;
   border: 0px;
   color: #FFFFFF;
   background: #ACD15D;
@@ -281,8 +282,6 @@ h2::after {
   }
 }
 .firstSection .download {
-  z-index: 2;
-  position: relative;
   width: 313px;
   height: 50px;
   left: 123px;
@@ -309,6 +308,7 @@ h2::after {
 }
 .firstSection .col-image .recycle-logo {
   position: absolute;
+  z-index: 4;
   bottom: 0;
   left: 0;
 }
@@ -353,6 +353,10 @@ h2::after {
   }
 }
 .firstSection .download-button {
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
   width: 313px;
   height: 50px;
   background: #FFFFFF;
@@ -495,7 +499,7 @@ h2::after {
   left: 0;
   top: 0;
   padding-bottom: 80px;
-  background: #E5E5E5;
+  background: rgba(16, 135, 122, 0.04);
 }
 .thirdSection h1 {
   font-family: "Fira Sans";
@@ -752,7 +756,9 @@ h2::after {
   line-height: 21px;
   color: #FFFFFF;
 }
-.fifthSection .text-and-button-col button {
+.fifthSection .text-and-button-col .download-button {
+  text-decoration: none;
+  cursor: pointer;
   margin-top: 34px;
   width: 313px;
   padding-top: 10px;
@@ -769,22 +775,22 @@ h2::after {
   transition: 0.4s ease all;
 }
 @media screen and (max-width: 368px) {
-  .fifthSection .text-and-button-col button {
+  .fifthSection .text-and-button-col .download-button {
     width: 270px;
   }
 }
-.fifthSection .text-and-button-col button img {
+.fifthSection .text-and-button-col .download-button img {
   padding-left: 51px;
 }
 @media screen and (max-width: 368px) {
-  .fifthSection .text-and-button-col button img {
+  .fifthSection .text-and-button-col .download-button img {
     padding-left: 21px;
   }
 }
-.fifthSection .text-and-button-col button:hover {
+.fifthSection .text-and-button-col .download-button:hover {
   opacity: 0.8;
 }
-.fifthSection .text-and-button-col button span {
+.fifthSection .text-and-button-col .download-button span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -831,6 +837,8 @@ h2::after {
   background: #1d968a;
 }
 .fifthSection .drop-down-col .tab-label::after {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
   content: "❯";
   color: #FBB040;
   width: 1em;
@@ -876,7 +884,7 @@ h2::after {
   background: #1d968a;
 }
 .fifthSection .drop-down-col .tab input:checked + .tab-label::after {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 .fifthSection .drop-down-col .tab input:checked ~ .tab-content {
   max-height: 100vh;

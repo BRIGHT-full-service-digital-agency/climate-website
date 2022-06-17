@@ -99,7 +99,5 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
-
 // cursor
 

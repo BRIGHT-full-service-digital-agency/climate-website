@@ -41,7 +41,9 @@
             line-height: 21px;
             color: #FFFFFF;
         }
-        button {
+        .download-button{
+            text-decoration: none;
+            cursor: pointer;
             margin-top: 34px;
             width: 313px;
             padding-top: 10px;
@@ -118,6 +120,8 @@
                     background: #1d968a;
                 }
                 &::after{
+                    transform: rotate(90deg);
+                    transform-origin: 50% 50%;
                     content: "\276F";
                     color: #FBB040;
                     width: 1em;
@@ -150,7 +154,6 @@
                         }
                     }
                 }
-                
             }
             &-close{
                 display: flex;
@@ -168,7 +171,7 @@
                 + .tab-label{
                     background: #1d968a;
                     &::after{
-                        transform: rotate(90deg);
+                        transform: rotate(-90deg);
                     }
 
                 }
