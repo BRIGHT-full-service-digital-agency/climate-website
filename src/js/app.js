@@ -1,5 +1,6 @@
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
-
+import Swiper from 'swiper/swiper-bundle.esm.js';
+import 'swiper/swiper-bundle.css';
 //language toggle menu
 const list = document.querySelectorAll('.language-choice');
 for (let language of list) {
@@ -73,9 +74,8 @@ function rotateArrow() {
 
 
 
-
 //swiper element
-var swiper = new Swiper('.swiper', {
+const swiper1 = new Swiper('.swiper1', {
   modules: [Navigation, Pagination, Scrollbar],
   freeMode: true,
   direction: 'horizontal',
@@ -95,19 +95,13 @@ var swiper = new Swiper('.swiper', {
 
   },
   scrollbar: {
-    el: ".swiper-scrollbar",
+    el: ".swiper-scrollbar1",
   },
 });
 
-
-
-
-var swiper2 = new Swiper(".swiper2", {
-  slidesPerView: 1,
+const swiper2 = new Swiper('.swiper2', {
+  modules: [Navigation, Pagination, Scrollbar],
   freeMode: true,
   direction: 'horizontal',
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  slidesPerView: 1,
 });
