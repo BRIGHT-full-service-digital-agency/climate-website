@@ -1,6 +1,4 @@
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
-import Swiper from 'swiper/swiper-bundle.esm.js';
-import 'swiper/swiper-bundle.css';
 //language toggle menu
 const list = document.querySelectorAll('.language-choice');
 for (let language of list) {

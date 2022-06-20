@@ -236,6 +236,11 @@ h2::after {
   background: #10877A;
   z-index: 5;
 }
+.firstSection .swiper-slide {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
 .firstSection .background-image {
   z-index: 1;
   position: absolute;
@@ -298,7 +303,7 @@ h2::after {
   border-radius: 368.5px;
 }
 .firstSection .col-image {
-  width: 50%;
+  width: 60%;
   position: relative;
 }
 @media screen and (max-width: 1200px) {
@@ -340,7 +345,7 @@ h2::after {
   }
 }
 .firstSection .col-text {
-  width: 50%;
+  width: 40%;
   padding-right: 143px;
   align-self: center;
   padding-top: 20px;

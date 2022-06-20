@@ -103,7 +103,7 @@ function rotateArrow() {
 } //swiper element
 
 
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper1', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
   freeMode: true,
   direction: 'horizontal',
@@ -122,16 +122,14 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
     }
   },
   scrollbar: {
-    el: ".swiper-scrollbar"
+    el: ".swiper-scrollbar1"
   }
 });
-var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-first-section', {
+var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper2', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
   freeMode: true,
   direction: 'horizontal',
-  scrollbar: {
-    el: ".swiper-scrollbar"
-  }
+  slidesPerView: 1
 });
 
 /***/ }),

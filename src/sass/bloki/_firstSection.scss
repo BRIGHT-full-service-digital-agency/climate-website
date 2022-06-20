@@ -7,6 +7,11 @@
     overflow: hidden;
     background: #10877A;
     z-index: 5;
+    .swiper-slide {    
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+    }
     .background-image{
         z-index: 1;
         position: absolute;
@@ -65,7 +70,7 @@
         border-radius: 368.5px;
     }
     .col-image{
-        width: 50%;
+        width: 60%;
         position: relative;
         @media screen and (max-width: 1200px) {
             width: 100%;
@@ -101,7 +106,7 @@
         }
     }
     .col-text{
-        width: 50%;
+        width: 40%;
         padding-right: 143px;
         align-self: center;
         padding-top: 20px;
