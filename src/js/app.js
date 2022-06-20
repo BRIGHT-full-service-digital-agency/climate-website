@@ -75,7 +75,7 @@ function rotateArrow() {
 
 
 //swiper element
-const swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Scrollbar],
   freeMode: true,
   direction: 'horizontal',
@@ -99,5 +99,15 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// cursor
 
+
+
+var swiper2 = new Swiper(".swiper2", {
+  slidesPerView: 1,
+  freeMode: true,
+  direction: 'horizontal',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

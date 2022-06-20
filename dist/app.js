@@ -124,7 +124,15 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
   scrollbar: {
     el: ".swiper-scrollbar"
   }
-}); // cursor
+});
+var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-first-section', {
+  modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
+  freeMode: true,
+  direction: 'horizontal',
+  scrollbar: {
+    el: ".swiper-scrollbar"
+  }
+});
 
 /***/ }),
 
