@@ -7,6 +7,25 @@
     overflow: hidden;
     background: #10877A;
     z-index: 5;
+    .swiper-button-next{
+        margin-right: 125px;
+        top: calc(100% - 68px);
+        &::after{
+            display: none;
+        }
+
+    }
+    .swiper-button-prev{
+        margin-left: calc(100% - (190px + 29px));
+        transform: rotate(180deg);
+        top: calc(100% - 68px);
+        &::after{
+            display: none;
+        }
+    }
+    .row {
+        width: calc(100% + ((100vw - 100%) / 2));
+    }
     .swiper-slide {    
         overflow: hidden;
         display: flex;
@@ -70,7 +89,7 @@
         border-radius: 368.5px;
     }
     .col-image{
-        width: 60%;
+        width: 50%;
         position: relative;
         @media screen and (max-width: 1200px) {
             width: 100%;
@@ -98,7 +117,8 @@
             }
         }
         .background-img{
-            overflow: hidden;
+            overflow: visible;
+            height: 100%;
             width: 50vw;
             @media screen and (max-width: 1200px) {
                 width: 100%;
@@ -153,6 +173,7 @@
             font-size: 15px;
             line-height: 30px;
             color: #10877A;
+
         }
         
     }

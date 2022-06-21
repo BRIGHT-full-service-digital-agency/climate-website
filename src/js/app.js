@@ -79,7 +79,7 @@ const swiper1 = new Swiper('.swiper1', {
   direction: 'horizontal',
   breakpoints: {
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 3.5,
       spaceBetween: 30,
     },
     850: {
@@ -102,4 +102,17 @@ const swiper2 = new Swiper('.swiper2', {
   freeMode: true,
   direction: 'horizontal',
   slidesPerView: 1,
+  spaceBetween: 50,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
+
+setTimeout(function (){
+  debugger
+  var slider = document.getElementsByClassName("swiper-scrollbar-horizontal")
+  var example = document.getElementsByClassName("wrapperWidth")
+  slider[0].style.width = example[0].style.width
+
+}, 400)

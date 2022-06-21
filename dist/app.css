@@ -12,10 +12,10 @@
   align-items: center;
 }
 .pageHeader button {
+  background: #ACD15D;
   cursor: pointer;
   border: 0px;
   color: #FFFFFF;
-  background: #ACD15D;
   border-radius: 50px;
   height: 50px;
   width: 232px;
@@ -59,7 +59,7 @@
 .pageHeader .col-menu {
   align-content: center;
 }
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1221px) {
   .pageHeader .col-menu {
     display: none;
   }
@@ -102,12 +102,13 @@
 .pageHeader .CTAbutton {
   border: 0px;
 }
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1221px) {
   .pageHeader .CTAbutton {
     display: none;
   }
 }
 .pageHeader #openModal {
+  background: transparent;
   position: absolute;
   top: 20px;
   right: 50px;
@@ -118,10 +119,10 @@
 .pageHeader #openModal div {
   width: 30px;
   height: 3px;
-  background-color: black;
+  background-color: white;
   margin: 5px 20px;
 }
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1221px) {
   .pageHeader #openModal {
     display: block;
   }
@@ -189,6 +190,7 @@ body, html {
 }
 
 body {
+  position: relative;
   padding-top: 124px;
 }
 @media screen and (max-width: 400px) {
@@ -235,6 +237,24 @@ h2::after {
   overflow: hidden;
   background: #10877A;
   z-index: 5;
+}
+.firstSection .swiper-button-next {
+  margin-right: 125px;
+  top: calc(100% - 68px);
+}
+.firstSection .swiper-button-next::after {
+  display: none;
+}
+.firstSection .swiper-button-prev {
+  margin-left: calc(100% - 219px);
+  transform: rotate(180deg);
+  top: calc(100% - 68px);
+}
+.firstSection .swiper-button-prev::after {
+  display: none;
+}
+.firstSection .row {
+  width: calc(100% + (100vw - 100%) / 2);
 }
 .firstSection .swiper-slide {
   overflow: hidden;
@@ -303,7 +323,7 @@ h2::after {
   border-radius: 368.5px;
 }
 .firstSection .col-image {
-  width: 60%;
+  width: 50%;
   position: relative;
 }
 @media screen and (max-width: 1200px) {
@@ -336,7 +356,8 @@ h2::after {
   transform-origin: 50% 50%;
 }
 .firstSection .col-image .background-img {
-  overflow: hidden;
+  overflow: visible;
+  height: 100%;
   width: 50vw;
 }
 @media screen and (max-width: 1200px) {
@@ -607,19 +628,16 @@ h2::after {
   line-height: 45px;
   color: #10877A;
 }
+.fourthSection .swiper-row {
+  position: relative;
+  width: calc(100% + (100vw - 100%) / 2);
+}
 .fourthSection .picture-row {
   padding-bottom: 153px;
   padding-top: 70px;
   display: flex;
-  width: 100vw;
   margin-left: -50px;
   flex-wrap: nowrap;
-}
-@media screen and (max-width: 1549px) {
-  .fourthSection .picture-row {
-    flex-wrap: wrap;
-    width: 100%;
-  }
 }
 .fourthSection .picture-row .swiper-scrollbar {
   margin-bottom: 87px;
@@ -628,14 +646,12 @@ h2::after {
   bottom: 3px;
   z-index: 50;
   height: 5px;
-  width: calc(100% - 50px);
 }
 .fourthSection .picture-row .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: #10877A;
 }
 .fourthSection .picture-row .col {
   position: relative;
-  width: 25vw;
   padding-left: 50px;
 }
 @media screen and (max-width: 1549px) {

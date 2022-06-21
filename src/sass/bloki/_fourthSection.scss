@@ -9,6 +9,7 @@
         position: absolute;
         overflow: hidden;
     }
+
     overflow: hidden;
     width: 100%;
     background: rgba(172, 209, 93, 0.2);
@@ -23,17 +24,16 @@
         line-height: 45px;
         color: #10877A;
     }
+    .swiper-row{
+        position: relative;
+        width: calc(100% + ((100vw - 100%) / 2));
+    }
     .picture-row{
         padding-bottom: 153px;
         padding-top: 70px;
         display: flex;
-        width: 100vw;
         margin-left: -50px;
         flex-wrap: nowrap;
-        @media screen and (max-width: 1549px) {
-            flex-wrap: wrap;
-            width: 100%;
-        }
         .swiper-scrollbar{
             margin-bottom: 87px;
             position: absolute;
@@ -41,14 +41,12 @@
             bottom: 3px;
             z-index: 50;
             height: 5px;
-            width: calc(100% - 50px);
             .swiper-scrollbar-drag{
                 background-color: #10877A;
             }
         }
         .col {
             position: relative;
-            width: 25vw;
             padding-left: 50px;
             @media screen and (max-width: 1549px) {
                 padding-bottom: 40px;

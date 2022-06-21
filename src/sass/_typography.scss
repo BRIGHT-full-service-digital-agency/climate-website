@@ -4,6 +4,7 @@ body, html  {
     overflow-x: hidden;
 }
 body {
+    position: relative;
     padding-top: 124px;
     @media screen and (max-width: 400px) {
         padding-top: 75px;

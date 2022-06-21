@@ -109,7 +109,7 @@ var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper1', {
   direction: 'horizontal',
   breakpoints: {
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 3.5,
       spaceBetween: 30
     },
     850: {
@@ -129,8 +129,19 @@ var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper2', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
   freeMode: true,
   direction: 'horizontal',
-  slidesPerView: 1
+  slidesPerView: 1,
+  spaceBetween: 50,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 });
+setTimeout(function () {
+  debugger;
+  var slider = document.getElementsByClassName("swiper-scrollbar-horizontal");
+  var example = document.getElementsByClassName("wrapperWidth");
+  slider[0].style.width = example[0].style.width;
+}, 400);
 
 /***/ }),
 

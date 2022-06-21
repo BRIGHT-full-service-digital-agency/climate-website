@@ -10,10 +10,10 @@
         align-items: center;
     }
     button{
+        background: #ACD15D;
         cursor: pointer;
         border: 0px;
         color: #FFFFFF;
-        background: #ACD15D;
         border-radius: 50px;
         height: 50px;
         width: 232px;
@@ -58,7 +58,7 @@
     }
     .col-menu{
         align-content: center;
-        @media screen and (max-width: 1204px){
+        @media screen and (max-width: 1221px){
             display: none;
         }
     }
@@ -104,11 +104,12 @@
     }
     .CTAbutton{
         border: 0px;
-        @media screen and (max-width: 1204px){
+        @media screen and (max-width: 1221px){
             display: none;
         }
     }
     #openModal{
+        background: transparent;
         position: absolute;
         top: 20px;
         right: 50px;
@@ -118,10 +119,10 @@
         div {
             width: 30px;
             height: 3px;
-            background-color: black;
+            background-color: white;
             margin: 5px 20px;
         }
-        @media screen and (max-width: 1204px){
+        @media screen and (max-width: 1221px){
             display: block;
         }
         @media screen and (max-width: 400px){
