@@ -27,7 +27,7 @@
     a {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 600;
+
         font-size: 17px;
         line-height: 30px;
         color: #FFFFFF;
@@ -42,6 +42,7 @@
     .col-menu {
         margin-left: auto;
         a {
+            font-weight: 600;
             padding-left: 30px;
             padding-right: 30px;
         }
@@ -66,6 +67,7 @@
         position: relative;
         padding-left: 30px;
         cursor: pointer;
+        font-weight: normal;
         .language-choice{
             position: relative;
             .triangle-button{
@@ -80,6 +82,7 @@
                 transition: 0.2s ease all;
             }
             &.active{
+                font-weight: 600;
                 .triangle-button{
                     transform: rotate(180deg);
                 }

@@ -1,6 +1,9 @@
 .fourthSection{
     padding-top: 80px;
     position: relative;
+    .wrap{
+        position: relative;
+    }
     .background-image{
         top: -30%;
         right: -30%;
@@ -9,7 +12,26 @@
         position: absolute;
         overflow: hidden;
     }
-
+    #swiper-scrollbar-horizontal{
+        bottom: 3px;
+        height: 5px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .swiper-scrollbar{
+        position: relative;
+        z-index: -1;
+        margin-bottom: 87px
+    }
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+        z-index: 0;
+        left: 0;
+        width: 100%;
+    }
+    .swiper-scrollbar-drag{
+        background-color: #10877A;
+    }
     overflow: hidden;
     width: 100%;
     background: rgba(172, 209, 93, 0.2);
@@ -29,22 +51,11 @@
         width: calc(100% + ((100vw - 100%) / 2));
     }
     .picture-row{
-        padding-bottom: 153px;
+        padding-bottom: 66px;
         padding-top: 70px;
         display: flex;
         margin-left: -50px;
         flex-wrap: nowrap;
-        .swiper-scrollbar{
-            margin-bottom: 87px;
-            position: absolute;
-            left: 50px;
-            bottom: 3px;
-            z-index: 50;
-            height: 5px;
-            .swiper-scrollbar-drag{
-                background-color: #10877A;
-            }
-        }
         .col {
             position: relative;
             padding-left: 50px;

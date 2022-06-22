@@ -34,8 +34,9 @@ span.onclick = function () {
 //functionality for back to top button
 var backToTop = document.getElementById("toTop");
 backToTop.onclick = function () {
-  window.scrollTo(1, 1);
+  window.scrollTo(0, 0);
 }
+
 
 //infinite arrow rotation animation
 var rotate = document.getElementById("arrow1");
@@ -99,10 +100,16 @@ const swiper1 = new Swiper('.swiper1', {
 
 const swiper2 = new Swiper('.swiper2', {
   modules: [Navigation, Pagination, Scrollbar],
-  freeMode: true,
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 50,
+  speed: 5000,
+  autoplay: {
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    delay: 700,
+
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -110,9 +117,32 @@ const swiper2 = new Swiper('.swiper2', {
 });
 
 setTimeout(function (){
-  debugger
-  var slider = document.getElementsByClassName("swiper-scrollbar-horizontal")
-  var example = document.getElementsByClassName("wrapperWidth")
-  slider[0].style.width = example[0].style.width
+  var slider = document.getElementById("swiper-scrollbar-horizontal")
+  var example = document.getElementById("wrapperWidth")
+  var widthofitem = example.offsetWidth
+  console.log(widthofitem)
+},)
 
-}, 400)
+
+var backToTop = document.getElementById("toTop");
+backToTop.onclick = function () {
+  window.scrollTo(0, 0);
+}
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  var toGuidelines = document.getElementById("toGuidelines");
+  var firstSection = document.getElementById("secondSection")
+  toGuidelines.onclick = function (e) {
+    e.preventDefault()
+    window.scrollTo(0, firstSection.getBoundingClientRect().top)
+  }
+
+
+  var toTransport = document.getElementById("toTransport");
+  var secondSection = document.getElementById("thirdSection")
+  toTransport.onclick = function (e) {
+    e.preventDefault()
+    window.scrollTo(0, secondSection.getBoundingClientRect().top)
+  }
+});

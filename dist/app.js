@@ -66,7 +66,7 @@ span.onclick = function () {
 var backToTop = document.getElementById("toTop");
 
 backToTop.onclick = function () {
-  window.scrollTo(1, 1);
+  window.scrollTo(0, 0);
 }; //infinite arrow rotation animation
 
 
@@ -127,21 +127,49 @@ var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper1', {
 });
 var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper2', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
-  freeMode: true,
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 50,
+  speed: 5000,
+  autoplay: {
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+    delay: 700
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
 });
 setTimeout(function () {
-  debugger;
-  var slider = document.getElementsByClassName("swiper-scrollbar-horizontal");
-  var example = document.getElementsByClassName("wrapperWidth");
-  slider[0].style.width = example[0].style.width;
-}, 400);
+  var slider = document.getElementById("swiper-scrollbar-horizontal");
+  var example = document.getElementById("wrapperWidth");
+  var widthofitem = example.offsetWidth;
+  console.log(widthofitem);
+});
+var backToTop = document.getElementById("toTop");
+
+backToTop.onclick = function () {
+  window.scrollTo(0, 0);
+};
+
+window.addEventListener('DOMContentLoaded', function (event) {
+  var toGuidelines = document.getElementById("toGuidelines");
+  var firstSection = document.getElementById("secondSection");
+
+  toGuidelines.onclick = function (e) {
+    e.preventDefault();
+    window.scrollTo(0, firstSection.getBoundingClientRect().top);
+  };
+
+  var toTransport = document.getElementById("toTransport");
+  var secondSection = document.getElementById("thirdSection");
+
+  toTransport.onclick = function (e) {
+    e.preventDefault();
+    window.scrollTo(0, secondSection.getBoundingClientRect().top);
+  };
+});
 
 /***/ }),
 

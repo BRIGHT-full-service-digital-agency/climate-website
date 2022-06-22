@@ -28,7 +28,6 @@
 .pageHeader a {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
   font-size: 17px;
   line-height: 30px;
   color: #FFFFFF;
@@ -43,6 +42,7 @@
   margin-left: auto;
 }
 .pageHeader .col-menu a {
+  font-weight: 600;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -68,6 +68,7 @@
   position: relative;
   padding-left: 30px;
   cursor: pointer;
+  font-weight: normal;
 }
 .pageHeader .col-lang-switcher .language-choice {
   position: relative;
@@ -82,6 +83,9 @@
   top: 18px;
   right: -27px;
   transition: 0.2s ease all;
+}
+.pageHeader .col-lang-switcher .language-choice.active {
+  font-weight: 600;
 }
 .pageHeader .col-lang-switcher .language-choice.active .triangle-button {
   transform: rotate(180deg);
@@ -334,8 +338,8 @@ h2::after {
 .firstSection .col-image .recycle-logo {
   position: absolute;
   z-index: 4;
-  bottom: 0;
-  left: 0;
+  bottom: 14px;
+  left: 20px;
 }
 @media screen and (max-width: 800px) {
   .firstSection .col-image .recycle-logo {
@@ -525,7 +529,7 @@ h2::after {
   left: 0;
   top: 0;
   padding-bottom: 80px;
-  background: rgba(16, 135, 122, 0.04);
+  background-color: #FFFFFF;
 }
 .thirdSection h1 {
   font-family: "Fira Sans";
@@ -611,6 +615,9 @@ h2::after {
   left: 0;
   top: 0;
 }
+.fourthSection .wrap {
+  position: relative;
+}
 .fourthSection .background-image {
   top: -30%;
   right: -30%;
@@ -618,6 +625,25 @@ h2::after {
   width: 100vw;
   position: absolute;
   overflow: hidden;
+}
+.fourthSection #swiper-scrollbar-horizontal {
+  bottom: 3px;
+  height: 5px;
+  width: 100%;
+  position: relative;
+}
+.fourthSection .swiper-scrollbar {
+  position: relative;
+  z-index: -1;
+  margin-bottom: 87px;
+}
+.fourthSection .swiper-horizontal > .swiper-scrollbar, .fourthSection .swiper-scrollbar.swiper-scrollbar-horizontal {
+  z-index: 0;
+  left: 0;
+  width: 100%;
+}
+.fourthSection .swiper-scrollbar-drag {
+  background-color: #10877A;
 }
 .fourthSection h1 {
   font-family: "Fira Sans";
@@ -633,22 +659,11 @@ h2::after {
   width: calc(100% + (100vw - 100%) / 2);
 }
 .fourthSection .picture-row {
-  padding-bottom: 153px;
+  padding-bottom: 66px;
   padding-top: 70px;
   display: flex;
   margin-left: -50px;
   flex-wrap: nowrap;
-}
-.fourthSection .picture-row .swiper-scrollbar {
-  margin-bottom: 87px;
-  position: absolute;
-  left: 50px;
-  bottom: 3px;
-  z-index: 50;
-  height: 5px;
-}
-.fourthSection .picture-row .swiper-scrollbar .swiper-scrollbar-drag {
-  background-color: #10877A;
 }
 .fourthSection .picture-row .col {
   position: relative;
@@ -859,13 +874,14 @@ h2::after {
 }
 .fifthSection .drop-down-col .tab-label::after {
   transform: rotate(90deg);
-  transform-origin: 50% 50%;
+  transform-origin: center;
   content: "❯";
   color: #FBB040;
   width: 1em;
   height: 1em;
   text-align: center;
   transition: all 0.35s;
+  line-height: 1;
 }
 .fifthSection .drop-down-col .tab-content {
   max-height: 0;

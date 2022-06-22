@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="dist/app.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
-        <title>Document</title>
+        <title>GameOn</title>
     </head>
     <body>
         <!--Header-->
@@ -21,11 +22,11 @@
                     </div>
                     <div class="col-menu">
                         <nav class="navBar" id="navbar">
-                            <a class="guidelines" href="">Guidelines</a>
-                            <a class="transport" href="">Transport</a>
-                            <a class="locations" href="">Locations</a>
-                            <a class="food" href="">Food</a>
-                            <a class="waste" href="">Waste</a>
+                            <a class="guidelines" id="toGuidelines">Guidelines</a>
+                            <a class="transport" id="toTransport">Transport</a>
+                            <a class="locations" id="toLocations">Locations</a>
+                            <a class="food" id="toFood">Food</a>
+                            <a class="waste" id="toWaste">Waste</a>
                         </nav>
                     </div>
                     <div class="col-button">
@@ -62,7 +63,7 @@
                 </div>
             </div>
         </header>
-        <section class="firstSection">
+        <section class="firstSection" id="firstSection">
             <img class="background-image" src="pictures/Group4.svg" alt="background-image-1">
             <div class="wrap">
                 <div class="row">
@@ -125,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <section class="secondSection">
+        <section class="secondSection" id="secondSection">
             <img class="background-img" src="pictures/Group19.svg" alt="background-image-for-second-section">
             <div class="wrap">
                 <div class="welcome-text">
@@ -154,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <section class="thirdSection">
+        <section class="thirdSection" id="thirdSection">
             <div class="wrap">
                 <div class="heading-text">
                     <h1>Why use it, exactly?</h1>
@@ -195,7 +196,7 @@
             </div>
             <div class="line"></div>
         </section>
-        <section class="fourthSection">
+        <section class="fourthSection" id="fourthSection">
             <img src="pictures/Group12.svg" class="background-image" alt="backgroung-image-for-fourth-section">
             <div class="wrap">
                 <div class="row">
@@ -208,7 +209,7 @@
                     <div class="swiper-row">
                         <div class="picture-row swiper swiper1">
                             <div class="swiper-wrapper">
-                                <div class="col swiper-slide">
+                                <div class="col swiper-slide" >
                                     <div class="image-c">
                                         <img src="pictures/image14.jpg" alt="first-picture">
                                         <div class="filter"></div>
@@ -237,13 +238,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-scrollbar swiper-scrollbar1"></div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-scrollbar swiper-scrollbar1" id="swiper-scrollbar-horizontal"></div>
             </div>
         </section>
-        <section class="fifthSection">
+        <section class="fifthSection" id="fifthSection">
             <div class="wrap"><h3>FAQ</h3></div>
             <div class="wrap">
                 <div class="row">
@@ -318,12 +319,12 @@
                     <h1 class="styled">Don't let climate change</h1>
                 </div>
                 <div class="back-to-top-container">
-                    <a class="toTop js-toTop()" id="toTop">Back to top</a><img src="pictures/bulta2.svg" alt="arrow-for-to-up">
+                    <a class="toTop js-toTop()" id="toTop">Back to top<img src="pictures/bulta2.svg" alt="arrow-for-to-up"></a>
                 </div>
         </section>
         <footer class="pageFooter">
             <div class="wrap">
-                <div class="row wrapperWidth">
+                <div class="row" id="wrapperWidth">
                     <div class="logo-col">
                         <img alt="logo" src="pictures/Vector.svg">
                     </div>

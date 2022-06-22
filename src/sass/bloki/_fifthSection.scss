@@ -121,13 +121,14 @@
                 }
                 &::after{
                     transform: rotate(90deg);
-                    transform-origin: 50% 50%;
+                    transform-origin: center;
                     content: "\276F";
                     color: #FBB040;
                     width: 1em;
                     height: 1em;
                     text-align: center;
                     transition: all .35s;
+                    line-height: 1;
                 }
 
             }
