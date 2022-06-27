@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
 //language toggle menu
 const list = document.querySelectorAll('.language-choice');
 for (let language of list) {
@@ -15,6 +15,15 @@ function toggleMenu() {
     this.classList.remove("active")
     x.style.display = "none";
   }
+  document.addEventListener('click', function handleClickOutsideBox(event){
+    const lang = document.getElementById("languages")
+    const langSwitcher = document.getElementById("lang-switcher")
+    const arrowd = document.getElementById("triangle-button")
+    console.log(event.target)
+    if (!langSwitcher.contains(event.target)) {
+      lang.style.display = "none";
+    }
+  })
 }
 
 //modal for mobile view
@@ -99,16 +108,14 @@ const swiper1 = new Swiper('.swiper1', {
 });
 
 const swiper2 = new Swiper('.swiper2', {
-  modules: [Navigation, Pagination, Scrollbar],
+  modules: [Navigation, Pagination, Scrollbar, Autoplay],
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 50,
-  speed: 5000,
+  speed: 6000,
   autoplay: {
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-    delay: 700,
-
+    delay: 7000,
+    disableOnInteraction: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -146,3 +153,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.scrollTo(0, secondSection.getBoundingClientRect().top)
   }
 });
+
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.getElementById(".modal-open").style.overflow = "visible";
+  }
+}

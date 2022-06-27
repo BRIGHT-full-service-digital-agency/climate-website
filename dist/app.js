@@ -45,6 +45,17 @@ function toggleMenu() {
     this.classList.remove("active");
     x.style.display = "none";
   }
+
+  document.addEventListener('click', function handleClickOutsideBox(event) {
+    var lang = document.getElementById("languages");
+    var langSwitcher = document.getElementById("lang-switcher");
+    var arrowd = document.getElementById("triangle-button");
+    console.log(event.target);
+
+    if (!langSwitcher.contains(event.target)) {
+      lang.style.display = "none";
+    }
+  });
 } //modal for mobile view
 
 
@@ -126,15 +137,14 @@ var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper1', {
   }
 });
 var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper2', {
-  modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar],
+  modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay],
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 50,
-  speed: 5000,
+  speed: 6000,
   autoplay: {
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-    delay: 700
+    delay: 7000,
+    disableOnInteraction: true
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -170,6 +180,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
     window.scrollTo(0, secondSection.getBoundingClientRect().top);
   };
 });
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.getElementById(".modal-open").style.overflow = "visible";
+  }
+};
 
 /***/ }),
 
