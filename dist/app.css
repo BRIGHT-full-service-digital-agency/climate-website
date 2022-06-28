@@ -4,13 +4,9 @@
   position: fixed;
   width: 100%;
   font-family: "Montserrat";
-  background: #FFFFFF;
+  background: #10877A;
   top: 0;
   left: 0;
-}
-.pageHeader img {
-  fill: black;
-  filter: invert(61%) sepia(62%) saturate(3659%) hue-rotate(157deg) brightness(89%) contrast(87%);
 }
 .pageHeader .row {
   align-items: center;
@@ -34,7 +30,7 @@
   font-style: normal;
   font-size: 17px;
   line-height: 30px;
-  color: #10877A;
+  color: #FFFFFF;
   text-decoration: none;
   opacity: 1;
   transition: 0.4s ease all;
@@ -82,7 +78,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #10877A;
+  border-top: 5px solid #FFFFFF;
   position: relative;
   top: 18px;
   right: -27px;
@@ -127,11 +123,12 @@
   width: 70px;
   height: 70px;
 }
-.pageHeader #openModal div {
+.pageHeader #openModal span {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   margin: 5px 20px;
+  display: block;
 }
 @media screen and (max-width: 1221px) {
   .pageHeader #openModal {
@@ -144,7 +141,7 @@
     height: 50px;
     top: 20px;
   }
-  .pageHeader #openModal div {
+  .pageHeader #openModal span {
     margin: 5px 11px;
   }
 }
